@@ -15,13 +15,31 @@
 
 </head>
 <body>
-	<script src="resources/systemjs.config.js"></script>
-	<script>
-		System.import('app.js')	
-			.then(null, console.error.bind(console));
-	</script>
+    <!-- Configure System.js, our module loader -->
+    <script src="resources/systemjs.config.js"></script>
+    <script>
+      System.import('app.js')
+            .then(null, console.error.bind(console));
+    </script>
 
-	<hello-world></hello-world>
+    <!-- Menu Bar -->
+    <div class="ui menu">
+      <div class="ui container">
+        <a href="#" class="header item">
+          <img class="logo" src="resources/images/ng-book-2-minibook.png">
+          ng-book 2
+        </a>
+        <div class="header item borderless">
+          <h1 class="ui header">
+            Angular 2 Simple Reddit
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui main text container">
+      <reddit></reddit> <!-- <--- Our app loads here! -->
+    </div>
 
 </body>
 </html>
