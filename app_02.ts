@@ -1,3 +1,5 @@
+import { Component } from '@angular/core';
+
 @Component({
 	selector: 'reddit-article',
 	host: {
@@ -35,7 +37,7 @@
 			</div>
 	`
 })
-class ArticleComponent {
+export class ArticleComponent {
 	votes: number;
 	title: string;
 	link: string;
